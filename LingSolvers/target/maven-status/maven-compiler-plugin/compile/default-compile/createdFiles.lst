@@ -1,0 +1,8 @@
+com/mycompany/app/LexicalCat.class
+com/mycompany/app/Root.class
+com/mycompany/app/Solver.class
+com/mycompany/app/MSolver.class
+com/mycompany/app/Affix.class
+com/mycompany/app/Morpheme.class
+com/mycompany/app/Word.class
+com/mycompany/app/DataSet.class
