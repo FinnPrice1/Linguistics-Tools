@@ -43,22 +43,21 @@ public class MSolver extends Solver {
             if (solution.contains(a.meaning.get(i))){
                 aKnown++;
             }
+            else if(b.meaning.contains(a.meaning.get(i))){
+                shared++;
+            }
         }
         for (int i=0;i<b.meaning.size();i++){
             if (solution.contains(b.meaning.get(i))){
                 bKnown++;
             }
         }
-        for (int i=0;i<a.meaning.size();i++){
-            if(!solution.contains(a.meaning.get(i))){
-                if (b.meaning.contains(a.meaning.get(i))){
-                    shared++;
-                }
-            }
-        }
+        
 
-        boolean oneUniqueA = (a.meaning.size()-aKnown-shared)==1;
-        boolean oneUniqueB = (b.meaning.size()-bKnown-shared)==1;
+        System.out.println("shared = "+shared+" aK = "+aKnown+" bK = "+bKnown);
+
+        boolean oneUniqueA = (a.meaning.size()-aKnown-shared)<=1;
+        boolean oneUniqueB = (b.meaning.size()-bKnown-shared)<=1;
 
         return oneUniqueA && oneUniqueB;
     }
