@@ -27,6 +27,10 @@ public class MSolver extends Solver {
         // }
         return solution;
     }
+    //TODO make this private later
+    public void addKnown(Morpheme m){
+        solution.add(m);
+    }
     // public void compare(Word a,Word b){
         
     // }
@@ -52,8 +56,16 @@ public class MSolver extends Solver {
                 }
             }
         }
-        
-        return Math.abs((a.meaning.size()-aKnown) - (b.meaning.size()-bKnown))<=1;
+
+        boolean oneUniqueA = (a.meaning.size()-aKnown-shared)==1;
+        boolean oneUniqueB = (b.meaning.size()-bKnown-shared)==1;
+
+        return oneUniqueA && oneUniqueB;
     }
+    //minPair iff only one element in meaning is unique from the other, excluding known
+    // {"Fish", ".pl"}, {"Dog", ".pl"}
+    // a.meaning.size() = 2, shared = 1, aK = 0
+    // b.meanin.size() = 2, shared = 1, bK = 0
+
 }
 

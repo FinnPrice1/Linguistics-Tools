@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="com.mycompany.app.WordTest" time="0.018" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="com.mycompany.app.WordTest" time="0.02" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-25-openjdk-arm64/lib"/>
-    <property name="sun.java.command" value="/home/finny/Projects/Linguistics-Tools/LingSolvers/target/surefire/surefirebooter-20260528181523504_3.jar /home/finny/Projects/Linguistics-Tools/LingSolvers/target/surefire 2026-05-28T18-15-23_455-jvmRun1 surefire-20260528181523504_1tmp surefire_0-20260528181523504_2tmp"/>
+    <property name="sun.java.command" value="/home/finny/Projects/Linguistics-Tools/LingSolvers/target/surefire/surefirebooter-20260529144352418_3.jar /home/finny/Projects/Linguistics-Tools/LingSolvers/target/surefire 2026-05-29T14-43-52_368-jvmRun1 surefire-20260529144352418_1tmp surefire_0-20260529144352418_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/finny/Projects/Linguistics-Tools/LingSolvers/target/test-classes:/home/finny/Projects/Linguistics-Tools/LingSolvers/target/classes:/home/finny/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.0/junit-jupiter-api-5.11.0.jar:/home/finny/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/finny/.m2/repository/org/junit/platform/junit-platform-commons/1.11.0/junit-platform-commons-1.11.0.jar:/home/finny/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/finny/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.11.0/junit-jupiter-params-5.11.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/home/finny/Projects/Linguistics-Tools/LingSolvers/target/surefire/surefirebooter-20260528181523504_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/finny/Projects/Linguistics-Tools/LingSolvers/target/surefire/surefirebooter-20260529144352418_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.3-ea+7-Ubuntu-2"/>
     <property name="user.name" value="finny"/>
@@ -54,8 +54,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testMinPair" classname="com.mycompany.app.WordTest" time="0.009">
-    <system-out><![CDATA[true
-]]></system-out>
-  </testcase>
+  <testcase name="testMinPair" classname="com.mycompany.app.WordTest" time="0.01"/>
 </testsuite>

@@ -1,6 +1,6 @@
 package com.mycompany.app;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
@@ -10,10 +10,10 @@ import com.mycompany.app.Word;
 
 public class WordTest {
 
-
-    
+    String fishs[] = {"fish",".sg"};
     String dogs[] = {"dog",".pl"};
-    String[] cats={"cat",".pl"};
+    String cats[]={"cat",".pl"};
+    Word fish = new Word("fish",fishs);
     Word dog = new Word("dogs",dogs);
     Word cat = new Word("cat",cats);
     Word[] points= {};
@@ -21,8 +21,9 @@ public class WordTest {
 
     @Test
     public void testMinPair(){
-        System.out.println(solve.minPair(dog,cat));
+        assertTrue(solve.minPair(dog,cat));
+        assertFalse(solve.minPair(dog,fish));
     }
-    
+    // add more tests for size difference, and known elements
 
 }
