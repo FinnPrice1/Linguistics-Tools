@@ -43,7 +43,7 @@ public class WordTest {
         assertFalse(solve.minPair(dog,fish));
     }
 
-    // @Test
+    @Test
     public void testMinPairKnown(){
         Morpheme dog = new Morpheme("dog","dog");
         Morpheme cat = new Morpheme("cat","cat");
@@ -63,6 +63,20 @@ public class WordTest {
         assertTrue(solve.minPair(dogG,catG));   
         assertFalse(solve.minPair(fishG,catG));
         assertFalse(solve.minPair(fishG,dogG));
+    }
+
+    @Test
+    public void testCompareEvenSize(){
+        String cats[]={"cat",".pl"};
+        String dogs[] = {"dog",".pl"};
+        Word dog = new Word("dogs",dogs);
+        Word cat = new Word("cat",cats);
+
+        solve.compare(dog,cat);
+
+        Solution answer = solve.solve();
+        assertTrue(answer.contains("cat")!=-1);
+        assertTrue(answer.contains("dog")!=-1);
     }
 }
     // add more tests for size difference, and known elements

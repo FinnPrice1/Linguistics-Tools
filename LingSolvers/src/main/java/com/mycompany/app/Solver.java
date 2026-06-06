@@ -5,7 +5,7 @@ import java.util.Set;
 public abstract class Solver{
     public DataSet data;
 
-    public abstract Set solve();
+    public abstract Solution solve();
 
 
     public Solver(DataSet d){
