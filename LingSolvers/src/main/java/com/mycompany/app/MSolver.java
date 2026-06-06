@@ -34,6 +34,31 @@ public class MSolver extends Solver {
     public void compare(Word a,Word b){
         
     }
+    //TODO make private later
+    public String getPrefix(char[] a, char[] b){
+        String ret = "";
+        for (int i=0;i<a.length&&i<b.length;i++){
+            if (a[i]==b[i]){
+                ret+=a[i];
+            }
+            else{
+                break;
+            }
+        }
+        return ret;
+    }
+    public String getSuffix(char[] a, char[] b){
+        String ret = "";
+        for (int i=a.length-1,j=b.length-1;i>=0&&j>=0;i--,j--){
+            if (a[i]==b[j]){
+                ret+=a[i];
+            }
+            else{
+                break;
+            }
+        }
+        return ret;
+    }
     public boolean minPair(Word a, Word b){
         //iteratively compare meanings
         int shared=0;

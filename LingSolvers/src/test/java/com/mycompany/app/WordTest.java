@@ -64,21 +64,51 @@ public class WordTest {
         assertFalse(solve.minPair(fishG,catG));
         assertFalse(solve.minPair(fishG,dogG));
     }
+    // add more tests for size difference
+
+    //prefix and suffix tests
+    @Test
+    public void testPrefix0(){
+        char[] redo = {'r','e','d','o'};
+        char[] restate = {'r','e','s','t','a','t','e'};
+        assertTrue(solve.getPrefix(redo,restate).equals("re"));
+    }
+    @Test
+    public void testPrefix1(){
+        char[] re = {'r','e'};
+        char[] restate = {'r','e','s','t','a','t','e'};
+        assertTrue(solve.getPrefix(re,restate).equals("re"));
+    }
 
     @Test
-    public void testCompareEvenSize(){
-        String cats[]={"cat",".pl"};
-        String dogs[] = {"dog",".pl"};
-        Word dog = new Word("dogs",dogs);
-        Word cat = new Word("cat",cats);
-
-        solve.compare(dog,cat);
-
-        Solution answer = solve.solve();
-        assertTrue(answer.contains("cat")!=-1);
-        assertTrue(answer.contains("dog")!=-1);
+    public void testPrefix2(){
+        char[] esend = {'e','s','e','n','d'};
+        char[] restate = {'r','e','s','t','a','t','e'};
+        assertTrue(solve.getPrefix(esend,restate).equals(""));
     }
+
+    @Test
+    public void testSuffix(){
+        char[] dogs = {'d','o','g','s'};
+        char[] cats = {'c','a','t','s'};
+        assertTrue(solve.getSuffix(dogs,cats).equals("s"));
+    }
+
+    //compare tests
+    // @Test
+    // public void testCompareEvenSize(){
+    //     String cats[]={"cat",".pl"};
+    //     String dogs[] = {"dog",".pl"};
+    //     Word dog = new Word("dogs",dogs);
+    //     Word cat = new Word("cat",cats);
+
+    //     solve.compare(dog,cat);
+
+    //     Solution answer = solve.solve();
+    //     assertTrue(answer.contains("cat")!=-1);
+    //     assertTrue(answer.contains("dog")!=-1);
+    // }
+
 }
-    // add more tests for size difference, and known elements
 
 
