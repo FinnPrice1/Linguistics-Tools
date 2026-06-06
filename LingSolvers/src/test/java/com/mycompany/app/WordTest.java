@@ -69,29 +69,36 @@ public class WordTest {
     //prefix and suffix tests
     @Test
     public void testPrefix0(){
-        char[] redo = {'r','e','d','o'};
-        char[] restate = {'r','e','s','t','a','t','e'};
+        char[] redo = "redo".toCharArray();
+        char[] restate = "restate".toCharArray();
         assertTrue(solve.getPrefix(redo,restate).equals("re"));
     }
     @Test
     public void testPrefix1(){
-        char[] re = {'r','e'};
-        char[] restate = {'r','e','s','t','a','t','e'};
+        char[] re = "re".toCharArray();
+        char[] restate = "restate".toCharArray();
         assertTrue(solve.getPrefix(re,restate).equals("re"));
     }
 
     @Test
     public void testPrefix2(){
-        char[] esend = {'e','s','e','n','d'};
-        char[] restate = {'r','e','s','t','a','t','e'};
+        char[] esend = "esend".toCharArray();
+        char[] restate = "restate".toCharArray();
         assertTrue(solve.getPrefix(esend,restate).equals(""));
     }
 
     @Test
-    public void testSuffix(){
-        char[] dogs = {'d','o','g','s'};
-        char[] cats = {'c','a','t','s'};
+    public void testSuffix0(){
+        char[] dogs = "dogs".toCharArray();
+        char[] cats = "cats".toCharArray();
         assertTrue(solve.getSuffix(dogs,cats).equals("s"));
+    }
+
+    @Test
+    public void testSuffix1(){
+        char[] churches = "churches".toCharArray();
+        char[] judges = "judges".toCharArray();
+        assertTrue(solve.getSuffix(churches,judges).equals("es"));
     }
 
     //compare tests
